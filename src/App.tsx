@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
-import Formulario from './components/Formulario';
+import EstiloGlobal from './styles';
+import FormularioPost from './components/FormularioPost';
 import Cabecalho from './components/Cabecalho';
 import Hero from './components/Hero';
 import ListaDeVagas from './components/ListaDeVagas';
-import styles from './App.module.css';
+import FormularioContato from './components/FormularioContato';
+
 
 function App() {
   const [posts, setPosts] = useState<string[]>([]);
@@ -91,11 +93,12 @@ function App() {
   ];
 
   return (
-    <div className={styles.app}>
+    <div className="app">
+      <EstiloGlobal />
       <Cabecalho />
       <Hero />
       <ListaDeVagas vagas={vagas} />
-      <Formulario
+      <FormularioPost
         handleSubmit={handleSubmit}
         handleDeleteAllPosts={handleDeleteAllPosts}
         handleToggleForm={handleToggleForm}
@@ -103,11 +106,7 @@ function App() {
         contentRef={contentRef}
         posts={posts}
       />
-      <div>
-        {posts.map((post, index) => (
-          <p key={index}>{post}</p>
-        ))}
-      </div>
+      <FormularioContato />
     </div>
   );
 }

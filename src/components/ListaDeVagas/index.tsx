@@ -1,6 +1,6 @@
 import React from 'react';
+import { ListaDeVagasContainer } from './styles';
 import Vaga from '../Vaga';
-import styles from './ListaDeVagas.module.css';
 
 type VagaType = {
   title: string;
@@ -15,7 +15,7 @@ type ListaDeVagasProps = {
 
 const ListaDeVagas = ({ vagas }: ListaDeVagasProps) => {
   return (
-    <div className={styles.listaDeVagas}>
+    <ListaDeVagasContainer>
       {vagas.map((vaga, index) => (
         <Vaga
           key={index}
@@ -25,7 +25,7 @@ const ListaDeVagas = ({ vagas }: ListaDeVagasProps) => {
           salary={vaga.salary}
         />
       ))}
-    </div>
+    </ListaDeVagasContainer>
   );
 };
 

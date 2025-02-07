@@ -1,14 +1,13 @@
 import React from 'react';
-import styles from './Hero.module.css';
-import appStyles from '../../App.module.css';
+import { HeroContainer, HeroTitle, HeroSubtitle, HeroButton } from './styles';
 
 const Hero = () => {
   return (
-    <div className={`${styles.hero} ${appStyles.heroContainer}`}>
-      <h1 className={styles.heroTitle}>Bem-vindo ao Meu Site</h1>
-      <p className={styles.heroSubtitle}>Este é um subtítulo chamativo</p>
-      <button className={styles.heroButton}>Saiba Mais</button>
-    </div>
+    <HeroContainer>
+      <HeroTitle>HERO do Site</HeroTitle>
+      <HeroSubtitle>Este é um subtítulo</HeroSubtitle>
+      <HeroButton>Saiba Mais</HeroButton>
+    </HeroContainer>
   );
 };
 

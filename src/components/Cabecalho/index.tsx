@@ -1,11 +1,11 @@
 import React from 'react';
-import appStyles from '../../App.module.css';
+import { Header } from './syles';
 
 const Cabecalho = () => {
   return (
-    <header className={appStyles.cabecalhoContainer}>
+    <Header>
       Cabeçalho do Projeto
-    </header>
+    </Header>
   );
 };
 
